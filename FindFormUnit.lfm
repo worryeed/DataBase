@@ -1,0 +1,134 @@
+object FindForm: TFindForm
+  Left = 171
+  Height = 75
+  Top = 355
+  Width = 1412
+  BorderIcons = []
+  BorderStyle = bsNone
+  ClientHeight = 75
+  ClientWidth = 1412
+  Color = clMenu
+  FormStyle = fsStayOnTop
+  OnCreate = FormCreate
+  LCLVersion = '2.2.4.0'
+  object EditFind: TEdit
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    Left = 5
+    Height = 33
+    Top = 5
+    Width = 1183
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Left = 5
+    BorderSpacing.Top = 5
+    BorderSpacing.Right = 5
+    BorderSpacing.Bottom = 5
+    Font.Height = 25
+    ParentFont = False
+    TabOrder = 0
+    TextHint = 'Поиск...'
+  end
+  object ComboBoxColumns: TComboBox
+    AnchorSideLeft.Control = ButtonFind
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Owner
+    Left = 1268
+    Height = 33
+    Top = 5
+    Width = 100
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = False
+    BorderSpacing.Left = 5
+    BorderSpacing.Top = 5
+    BorderSpacing.Right = 5
+    BorderStyle = bsSingle
+    Font.Height = 25
+    ItemHeight = 25
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 1
+  end
+  object CheckBoxFullWord: TCheckBox
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = EditFind
+    AnchorSideTop.Side = asrBottom
+    Left = 5
+    Height = 27
+    Top = 43
+    Width = 179
+    BorderSpacing.Left = 5
+    BorderSpacing.Top = 5
+    BorderSpacing.Right = 5
+    Caption = 'Только целые слова'
+    Font.Height = -17
+    ParentFont = False
+    TabOrder = 2
+  end
+  object CheckBoxCaseSensitive: TCheckBox
+    AnchorSideLeft.Control = CheckBoxFullWord
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = EditFind
+    AnchorSideTop.Side = asrBottom
+    Left = 189
+    Height = 27
+    Top = 43
+    Width = 169
+    BorderSpacing.Left = 5
+    BorderSpacing.Top = 5
+    BorderSpacing.Right = 5
+    Caption = 'Учитывать регистр'
+    Font.Height = -17
+    ParentFont = False
+    TabOrder = 3
+  end
+  object ButtonFind: TSpeedButton
+    AnchorSideLeft.Control = EditFind
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Owner
+    Left = 1193
+    Height = 33
+    Top = 5
+    Width = 70
+    BorderSpacing.Left = 5
+    BorderSpacing.Top = 5
+    BorderSpacing.Right = 5
+    Caption = 'Найти'
+    Color = clDefault
+    Flat = True
+    Font.Height = -17
+    Transparent = False
+    ParentFont = False
+  end
+  object ButtonClose: TSpeedButton
+    AnchorSideLeft.Control = ComboBoxColumns
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Owner
+    Left = 1373
+    Height = 33
+    Top = 5
+    Width = 33
+    BorderSpacing.Left = 5
+    BorderSpacing.Top = 5
+    BorderSpacing.Right = 5
+    Caption = '❌'
+    Color = clDefault
+    Flat = True
+    Font.Height = -23
+    Transparent = False
+    ParentFont = False
+  end
+  object ImageBorder: TImage
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 0
+    Height = 75
+    Top = 0
+    Width = 1412
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.InnerBorder = 1
+  end
+end

@@ -1,0 +1,87 @@
+object DataBaseForm: TDataBaseForm
+  Left = 418
+  Height = 485
+  Top = 213
+  Width = 1120
+  Caption = 'DataBase'
+  ClientHeight = 0
+  ClientWidth = 0
+  Menu = MainMenu
+  OnClose = FormClose
+  OnConstrainedResize = FormConstrainedResize
+  OnCreate = FormCreate
+  OnResize = FormResize
+  PopupMode = pmAuto
+  Position = poMainFormCenter
+  LCLVersion = '2.2.4.0'
+  object LeftTableButton: TButton
+    Left = 16
+    Height = 30
+    Top = 24
+    Width = 150
+    Caption = 'Налево'
+    OnClick = LeftTableButtonClick
+    TabOrder = 0
+  end
+  object RightTableButton: TButton
+    Left = 272
+    Height = 30
+    Top = 32
+    Width = 150
+    Caption = 'Направо'
+    OnClick = RightTableButtonClick
+    TabOrder = 1
+  end
+  object AddButton: TButton
+    Left = -8
+    Height = 30
+    Top = 96
+    Width = 150
+    Caption = 'Добавить'
+    OnClick = AddButtonClick
+    TabOrder = 2
+  end
+  object DeleteButton: TButton
+    Left = 112
+    Height = 30
+    Top = 152
+    Width = 150
+    Caption = 'Удалить'
+    OnClick = DeleteButtonClick
+    TabOrder = 3
+  end
+  object ChangeButton: TButton
+    Left = 248
+    Height = 30
+    Top = 192
+    Width = 150
+    Caption = 'Изменить'
+    OnClick = ChangeButtonClick
+    TabOrder = 4
+  end
+  object MainMenu: TMainMenu
+    Left = 192
+    Top = 24
+    object MenuItemFile: TMenuItem
+      Caption = 'Файл'
+      object MenuItemSave: TMenuItem
+        Caption = 'Сохранить'
+        ShortCut = 16467
+        OnClick = MenuItemSaveClick
+      end
+      object MenuItemLoad: TMenuItem
+        Caption = 'Загрузить'
+        ShortCut = 16460
+        OnClick = MenuItemLoadClick
+      end
+    end
+    object MenuItemChange: TMenuItem
+      Caption = 'Изменить'
+      object MenuItemFind: TMenuItem
+        Caption = 'Найти'
+        ShortCut = 16454
+        OnClick = MenuItemFindClick
+      end
+    end
+  end
+end
